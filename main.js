@@ -4,6 +4,13 @@ const [arrowHome, arrowKontak, arrowInfo, arrowAbout, ArrowExperyment] = arrows;
 const cards = document.querySelectorAll(".card");
 const menuNames = document.querySelectorAll(".menu_name");
 
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty("--vh", `${vh}px`);
+window.addEventListener("resize", () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+});
+
 function rotArrow() {
   let rot = arrows[1].style.transform;
   if (!rot) {

@@ -143,6 +143,7 @@ body::-webkit-scrollbar {
 #home {
   overflow: scroll;
   height: calc(100vh - 50px);
+  height: calc(var(--vh, 1vh) * 100 - 50px);
   background-color: var(--white);
   top: 0;
   align-items: center;
@@ -170,7 +171,7 @@ body::-webkit-scrollbar {
 }
 #contact {
   background-color: var(--blue);
-  height: calc(100vh - 40px);
+  height: calc(var(--vh, 1vh) * 100 - 40px);
   align-items: center;
   top: 0;
   z-index: 4;
@@ -199,7 +200,7 @@ body::-webkit-scrollbar {
   width: 100%;
 }
 #info {
-  height: calc(100vh - 30px);
+  height: calc(var(--vh, 1vh) * 100 - 30px);
   background-color: var(--green);
   color: var(--green);
   display: flex;
@@ -215,7 +216,7 @@ body::-webkit-scrollbar {
   margin-right: 20px;
 }
 #about {
-  height: calc(100vh - 20px);
+  height: calc(var(--vh, 1vh) * 100 - 20px);
   background-color: var(--yellow);
   color: var(--yellow);
   display: flex;
@@ -252,7 +253,7 @@ body::-webkit-scrollbar {
 }
 
 #experiment {
-  height: calc(100vh - 10px);
+  height: calc(var(--vh, 1vh) * 100 - 10px);
   width: 100vw;
   border-radius: 0 0 20px 20px;
   background-color: var(--red);
