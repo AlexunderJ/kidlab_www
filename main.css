@@ -22,8 +22,6 @@ body {
   height: 100%;
   display: flex;
   justify-content: center;
-
-  /* overflow: hidden; */
 }
 body::-webkit-scrollbar {
   width: 0;
@@ -141,7 +139,9 @@ body::-webkit-scrollbar {
 }
 
 #home {
-  overflow: scroll;
+  /* overflow: scroll; */
+  display: flex;
+  flex-direction: column;
   height: calc(100vh - 50px);
   height: calc(var(--vh, 1vh) * 100 - 50px);
   background-color: var(--white);
@@ -152,11 +152,13 @@ body::-webkit-scrollbar {
 }
 
 #home > h1 {
-  font-size: 90px;
+  font-size: 15vh;
   text-align: center;
+  margin-bottom: 0;
 }
 #home > img {
-  width: 75%;
+  height: 40vh;
+  max-height: 384px;
   max-width: 468px;
 }
 #home.up .arrow {
@@ -482,7 +484,6 @@ a h3 {
     height: 0;
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
-
     border-left: 20px solid #10344b;
     border-bottom-left-radius: 100%;
     right: -20px;
@@ -491,10 +492,30 @@ a h3 {
     z-index: -1;
   }
   .arrow {
-    height: 100px;
+    height: 80px;
   }
   .arrow svg {
     height: 100%;
     width: 55px;
+  }
+}
+@media (max-height: 630px) and (min-width: 500px) {
+  #home {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  #home > img {
+    align-self: center;
+    height: 50vh;
+  }
+  #btn_zapisy {
+    width: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: flex-end;
+    margin-bottom: 100px;
   }
 }
